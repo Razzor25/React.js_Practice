@@ -8,11 +8,21 @@ function App() {
     setName('Roy');
     console.log(name);
   }
+  const [list,setList]=useState([
+    {title: 'Valorant' , id: 1},
+    {title: 'Dota2' , id: 2},
+    {title: 'CS-GO' , id: 3},
+  ]
+  );
 
   return (
     <div className="App">
       <h1>Welcome {name}</h1>
-      <button onClick={handleClick}>Click me</button>
+
+        {list.map((things)=>(
+          <p>{things.title}</p>
+        ))}
+
     </div>
   );
 }
