@@ -10,6 +10,11 @@ function App() {
     {title: 'CS-GO' , id: 3},
   ]
   );
+  const handleDelete=(id)=>{
+    setEvents(events.filter((event)=>{
+      return id!=event.id;
+    }))
+  }
   
 
   return (
@@ -18,6 +23,7 @@ function App() {
         {events.map((event)=>(
           <div key={event.id}>
             <h2>{event.id}-{event.title}</h2>
+            <button onClick={()=>handleDelete(event.id)}>Delete</button>
           </div>
         ))}
     </div>
