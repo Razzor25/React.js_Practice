@@ -16,8 +16,8 @@ function App() {
     <div className="App">
       <h1>Welcome {name}</h1>
         {events.map((event)=>(
-          <div>
-            <h2>{event.title}</h2>
+          <div key={event.id}>
+            <h2>{event.id}-{event.title}</h2>
           </div>
         ))}
     </div>
