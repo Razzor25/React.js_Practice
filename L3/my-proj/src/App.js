@@ -3,6 +3,7 @@ import {useState} from 'react';
 
 function App() {
   const [name,setName]= useState('Satya');
+  const [showevent,setShowevent]=useState(true);
 
   const [events,setEvents]=useState([
     {title: 'Valorant' , id: 1},
@@ -20,7 +21,17 @@ function App() {
   return (
     <div className="App">
       <h1>Welcome {name}</h1>
-        {events.map((event)=>(
+      {!showevent && 
+      <div>
+        <button onClick={()=>setShowevent(true)}><b>Show Events</b></button>
+      </div>
+      }
+      {showevent && 
+      <div>
+        <button onClick={()=>setShowevent(false)}><b>Hide Events</b></button>
+      </div>
+      }
+        { showevent && events.map((event)=>(
           <div key={event.id}>
             <h2>{event.id}-{event.title}</h2>
             <button onClick={()=>handleDelete(event.id)}>Delete</button>
