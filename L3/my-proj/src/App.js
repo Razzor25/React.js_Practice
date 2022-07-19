@@ -22,7 +22,7 @@ function App() {
   return (
     
     <div className="App">
-      <Title />
+      <Title headLine='This is an Example' subTitle='Greeting Note'/>
       <h1>Welcome {name}</h1>
       {!showevent && 
       <div>
