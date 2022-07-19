@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.titleHead{
+  display: inline-block;
+  padding: 5% 15%;
+  margin-bottom: 0px;
+  background-color: rgb(220, 220, 220);
+  border-radius: 35px;
+}
+
+.titleSubHead{
+  color: rgb(175, 175, 175);
+  display: inline-block;
+  /* margin-left: auto; */
+  margin-left: 25%;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 20px;
+  /* width: 20%; */
+}

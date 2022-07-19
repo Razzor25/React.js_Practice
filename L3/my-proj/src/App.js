@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from 'react';
+import Title from './components/Title';
 
 function App() {
   const [name,setName]= useState('Satya');
@@ -19,7 +20,9 @@ function App() {
   
 
   return (
+    
     <div className="App">
+      <Title />
       <h1>Welcome {name}</h1>
       {!showevent && 
       <div>
@@ -31,9 +34,9 @@ function App() {
         <button onClick={()=>setShowevent(false)}><b>Hide Events</b></button>
       </div>
       }
-        { showevent && events.map((event)=>(
+        { showevent && events.map((event, index)=>(
           <div key={event.id}>
-            <h2>{event.id}-{event.title}</h2>
+            <h2>{index+1}-{event.title}</h2>
             <button onClick={()=>handleDelete(event.id)}>Delete</button>
           </div>
         ))}
